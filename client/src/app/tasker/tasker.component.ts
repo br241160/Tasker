@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { taskerTask } from '../models/taskerTask';
 
 @Component({
   selector: 'app-tasker',
@@ -7,15 +8,19 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 })
 export class TaskerComponent {
 
-  tasks: any [] = ["str1", "str2", "str3"];
-  @ViewChild('taskName') taskName?: ElementRef;
+  tasks: taskerTask [] = [
+    {id: 1, name: "Clean the house", details: "Just clean it", done: false},
+    {id: 2, name: "Make a dinner", details: "Tasty", done: false},
+    {id: 3, name: "Buy things", details: "Nice things", done: false}
+  ];
 
   clearTasks(){
     this.tasks.pop;
   }
   
-  addTask(){
-    this.tasks.push(this.taskName?.nativeElement.value);
+  addTask(name: string, details: string){
+    this.tasks.push({id: 1, name, details, done: false});
+    console.log("Task name is ", name)
   }
 
 }
