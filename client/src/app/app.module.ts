@@ -7,6 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TimerComponent } from './timer/timer.component';
 import { TaskerComponent } from './tasker/tasker.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatSliderModule} from '@angular/material/slider';
+import { FormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { TaskerComponent } from './tasker/tasker.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
+    MatSliderModule,
+    FormsModule,
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

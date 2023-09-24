@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-center ">
+    <div class="mt-2">
+        <div>
+            <mat-progress-spinner
+            class="example-margin"
+            [value] = "timerValue"
+            [diameter] = 500
+            ></mat-progress-spinner>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <mat-slider class="timerSlider" discrete="true" min="1" max="60" step="0.5" value="1.5">
+                <input type="range" [(ngModel)]="timerInterval" matSliderThumb>
+              </mat-slider>
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+            <button mat-stroked-button color="primary" (click)="onStartTimer()">Start the timer</button>
+        </div>
+
+    </div>
+</div>
